@@ -9,7 +9,11 @@ function TemperatureInput({ temperature, scale, onTemperatureChange }) {
     <div>
       <fieldset>
         <legend>Enter temperature in {scaleName[scale]}</legend>
-        <input type="text" value={temperature} onChange={onTemperatureChange} />
+        <input
+          type="text"
+          value={temperature}
+          onChange={(e) => onTemperatureChange(e, scale)}
+        />
       </fieldset>
     </div>
   );
